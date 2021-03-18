@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>请求类接口（request） | counselor-sdk</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="你的强力伙伴">
+    
+    <link rel="preload" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css" as="style"><link rel="preload" href="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/2.874a51b1.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/12.370d6c7f.js" as="script"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/10.06d2353f.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/11.d4f5eb32.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/13.013ff707.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/14.3b2bbd93.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/15.5bd3f2e7.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/16.080dfaba.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/17.5bedfdee.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/3.ae0f4bc7.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/4.d6949b90.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/5.eefddad5.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/7.06a0828a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/8.f86fb59b.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/9.cf527afc.js">
+    <link rel="stylesheet" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/counselor-sdk-doc/" class="home-link router-link-active"><!----> <span class="site-name">counselor-sdk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>简介</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>API</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/counselor-sdk-doc/doc/require.html" class="sidebar-link">使用须知</a></li><li><a href="/counselor-sdk-doc/doc/common.html" class="sidebar-link">bootstrap</a></li><li><a href="/counselor-sdk-doc/doc/location.html" class="sidebar-link">location</a></li><li><a href="/counselor-sdk-doc/doc/system.html" class="sidebar-link">system</a></li><li><a href="/counselor-sdk-doc/doc/request.html" aria-current="page" class="active sidebar-link">request</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/request.html#sendpost" class="sidebar-link">sendPost</a></li></ul></li><li><a href="/counselor-sdk-doc/doc/view.html" class="sidebar-link">view</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="请求类接口-request"><a href="#请求类接口-request" class="header-anchor">#</a> 请求类接口（request）</h1> <h2 id="sendpost"><a href="#sendpost" class="header-anchor">#</a> sendPost</h2> <ul><li>说明：调用平台能力发送 post 请求</li> <li>参数 payload 对象如下：
+<ul><li>url <code>{string}</code> 请求地址</li> <li>body <code>{object}</code> 请求参数</li> <li>headers <code>{object}</code> 请求头</li></ul></li> <li>tips：此 Api 微信无实现，其中 url 参数需要绝对路径</li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1/-7</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> sendPost <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">sendPost</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token operator">:</span> <span class="token string">&quot;http://xxx.xxx.com/getXXX&quot;</span><span class="token punctuation">,</span>
+  body<span class="token operator">:</span> <span class="token punctuation">{</span>
+    a<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    b<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+    xxx<span class="token operator">:</span> <span class="token string">&quot;xxx&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">7</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 请自行发送post请求</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 成功时返回 {code, data, message}对象</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token operator">:</span> postCode<span class="token punctuation">,</span> data<span class="token operator">:</span> postData<span class="token punctuation">,</span> message<span class="token operator">:</span> postMessage <span class="token punctuation">}</span> <span class="token operator">=</span> data<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/counselor-sdk-doc/doc/system.html" class="prev">
+        system
+      </a></span> <span class="next"><a href="/counselor-sdk-doc/doc/view.html">
+        view
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" defer></script><script src="/counselor-sdk-doc/assets/js/2.874a51b1.js" defer></script><script src="/counselor-sdk-doc/assets/js/12.370d6c7f.js" defer></script>
+  </body>
+</html>

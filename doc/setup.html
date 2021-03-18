@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速上手 | counselor-sdk</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="你的强力伙伴">
+    
+    <link rel="preload" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css" as="style"><link rel="preload" href="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/2.874a51b1.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/14.3b2bbd93.js" as="script"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/10.06d2353f.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/11.d4f5eb32.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/12.370d6c7f.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/13.013ff707.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/15.5bd3f2e7.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/16.080dfaba.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/17.5bedfdee.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/3.ae0f4bc7.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/4.d6949b90.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/5.eefddad5.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/7.06a0828a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/8.f86fb59b.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/9.cf527afc.js">
+    <link rel="stylesheet" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/counselor-sdk-doc/" class="home-link router-link-active"><!----> <span class="site-name">counselor-sdk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>简介</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/counselor-sdk-doc/doc/description.html" class="sidebar-link">说明</a></li><li><a href="/counselor-sdk-doc/doc/install.html" class="sidebar-link">安装</a></li><li><a href="/counselor-sdk-doc/doc/setup.html" aria-current="page" class="active sidebar-link">快速上手</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/setup.html#项目中启动-sdk" class="sidebar-link">项目中启动 sdk</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/setup.html#api使用" class="sidebar-link">Api使用</a></li></ul></li><li><a href="/counselor-sdk-doc/doc/development.html" class="sidebar-link">开发counselor-sdk</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>API</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="快速上手"><a href="#快速上手" class="header-anchor">#</a> 快速上手</h1> <h2 id="项目中启动-sdk"><a href="#项目中启动-sdk" class="header-anchor">#</a> 项目中启动 sdk</h2> <p>以下示例为 vue-cli 默认创建的 main.js 文件</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">&quot;./App.vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> bootStrap <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token comment">//该函数是了为counselor-sdk获取初始化微信sdk的参数</span>
+<span class="token comment">// bootStrap将在内部执行这个函数，该函数返回值应遵照</span>
+<span class="token comment">// {code ,data ,message}结构</span>
+<span class="token keyword">function</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// xxxxxxxxxx</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">createApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> initOptions <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">// 此方法细节见Api中</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">bootStrap</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> initOptions<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> vue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">h</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span><span class="token string">&quot;#app&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">createApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>执行 bootStrap 会遵照约定返回{code, data, message}给你，当失败时，会返回对于的信息和code方便你在业务中进行处理
+以上操作执行正常时会自动注入对应平台的sdk脚本文件！，并且控制台中会告知你相关进度状态</p> <h2 id="api使用"><a href="#api使用" class="header-anchor">#</a> Api使用</h2> <p>counselor-sdk将今日校园、微信平台的jssdk分成了4大类别，当然开发人员可以自行维护新的类别<br>
+分别为 location、view、system、request<br>
+以下使用system中的scanQRCode（扫码二维码为例）</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>  <span class="token keyword">import</span> <span class="token punctuation">{</span> scanQRCode <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'counselor-sdk'</span>
+
+  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+      <span class="token keyword">async</span> <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">scanQRCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 成功</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 失败</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/counselor-sdk-doc/doc/install.html" class="prev">
+        安装
+      </a></span> <span class="next"><a href="/counselor-sdk-doc/doc/development.html">
+        开发counselor-sdk
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" defer></script><script src="/counselor-sdk-doc/assets/js/2.874a51b1.js" defer></script><script src="/counselor-sdk-doc/assets/js/14.3b2bbd93.js" defer></script>
+  </body>
+</html>

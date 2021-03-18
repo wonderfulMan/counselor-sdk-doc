@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>系统类接口（system） | counselor-sdk</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="你的强力伙伴">
+    
+    <link rel="preload" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css" as="style"><link rel="preload" href="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/2.874a51b1.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/15.5bd3f2e7.js" as="script"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/10.06d2353f.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/11.d4f5eb32.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/12.370d6c7f.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/13.013ff707.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/14.3b2bbd93.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/16.080dfaba.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/17.5bedfdee.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/3.ae0f4bc7.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/4.d6949b90.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/5.eefddad5.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/7.06a0828a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/8.f86fb59b.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/9.cf527afc.js">
+    <link rel="stylesheet" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/counselor-sdk-doc/" class="home-link router-link-active"><!----> <span class="site-name">counselor-sdk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>简介</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>API</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/counselor-sdk-doc/doc/require.html" class="sidebar-link">使用须知</a></li><li><a href="/counselor-sdk-doc/doc/common.html" class="sidebar-link">bootstrap</a></li><li><a href="/counselor-sdk-doc/doc/location.html" class="sidebar-link">location</a></li><li><a href="/counselor-sdk-doc/doc/system.html" aria-current="page" class="active sidebar-link">system</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#checklocalmode" class="sidebar-link">checkLocalMode</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#getdeviceinfo" class="sidebar-link">getDeviceInfo</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#getnetworktype" class="sidebar-link">getNetworkType</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#opensystempanel" class="sidebar-link">openSystemPanel</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#openuserhomepage" class="sidebar-link">openUserHomePage</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#previewfiles" class="sidebar-link">previewFiles</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#previewimages" class="sidebar-link">previewImages</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#scanqrcode" class="sidebar-link">scanQRCode</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#startimchat" class="sidebar-link">startIMChat</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#takephotoorcamera" class="sidebar-link">takephotoOrCamera</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#tel" class="sidebar-link">tel</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/system.html#withshare" class="sidebar-link">withShare</a></li></ul></li><li><a href="/counselor-sdk-doc/doc/request.html" class="sidebar-link">request</a></li><li><a href="/counselor-sdk-doc/doc/view.html" class="sidebar-link">view</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="系统类接口-system"><a href="#系统类接口-system" class="header-anchor">#</a> 系统类接口（system）</h1> <h2 id="checklocalmode"><a href="#checklocalmode" class="header-anchor">#</a> checkLocalMode</h2> <ul><li>说明：检查当前环境是否作弊</li> <li>参数：无</li> <li>tips：
+<ul><li>检查是否开启了作弊软件（实现 100%，微信永远返回 normal）当前业务要求只有作弊值需要记录 data 中返回了 type 和 value，所以当 code 为 0，data 中当 type 为 NORMAL 时不需要记录</li> <li>type, value 枚举位置</li> <li><code>import { CHECK_MODE, CHECK_VALUE } from &quot;counselor-sdk&quot;</code></li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> checkLocalMode <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">checkLocalMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> type<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> data<span class="token punctuation">;</span> <span class="token comment">// 成功时返回 type为作弊常量，value为后端业务值</span>
+</code></pre></div><h2 id="getdeviceinfo"><a href="#getdeviceinfo" class="header-anchor">#</a> getDeviceInfo</h2> <ul><li>说明：获取设备信息</li> <li>参数： 无</li> <li>tips：
+<ul><li>内部采用 mobile-detect.js 实现</li> <li>其中获取不到的值均返回 null 字段</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> getDeviceInfo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getDeviceInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span>
+  platform<span class="token punctuation">,</span> <span class="token comment">// 平台信息</span>
+  version<span class="token punctuation">,</span> <span class="token comment">// 当前系统版本</span>
+  uuid<span class="token punctuation">,</span> <span class="token comment">// uuid</span>
+  model<span class="token punctuation">,</span> <span class="token comment">// 机型</span>
+  manufacturer<span class="token punctuation">,</span> <span class="token comment">// 制造商</span>
+  serial<span class="token punctuation">,</span> <span class="token comment">// 序列号</span>
+  screenWidth<span class="token punctuation">,</span> <span class="token comment">// 设备宽</span>
+  screenHeight<span class="token punctuation">,</span> <span class="token comment">// 设备高</span>
+<span class="token punctuation">}</span> <span class="token operator">=</span> data<span class="token punctuation">;</span> <span class="token comment">// 成功时返回信息</span>
+</code></pre></div><h2 id="getnetworktype"><a href="#getnetworktype" class="header-anchor">#</a> getNetworkType</h2> <ul><li>说明：获取设备网络信息</li> <li>参数： 无</li> <li>tips：
+<ul><li>此 Api 今日校园无实现（采用老版本今日校园 jssdk），微信实现不稳定，采用 h5 实现，准确率低，谨慎使用</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> getNetworkType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getNetworkType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> isWifi <span class="token punctuation">}</span> <span class="token operator">=</span> data<span class="token punctuation">;</span> <span class="token comment">// 成功时返回是否处于wifi环境下</span>
+</code></pre></div><h2 id="opensystempanel"><a href="#opensystempanel" class="header-anchor">#</a> openSystemPanel</h2> <ul><li>说明：打开手机系统面板</li> <li>参数： 无</li> <li>tips：
+<ul><li>此 Api 只有今日校园实现，微信无实现</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> openSystemPanel <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">openSystemPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 根据code返回值来执行不支持平台的降级措施</span>
+</code></pre></div><h2 id="openuserhomepage"><a href="#openuserhomepage" class="header-anchor">#</a> openUserHomePage</h2> <ul><li>说明：打开今日校园个人主页</li> <li>参数： 无</li> <li>tips：
+<ul><li>此 Api 只有今日校园实现，微信无实现</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1/-7</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> openUserHomePage <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">openUserHomePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 根据code返回值来执行不支持平台的降级措施</span>
+</code></pre></div><h2 id="previewfiles"><a href="#previewfiles" class="header-anchor">#</a> previewFiles</h2> <ul><li>说明：文件预览</li> <li>参数 payload 对象如下：
+<ul><li>url <code>{string}</code> 地址</li> <li>filename <code>{string}</code> 文件名称只有今日校园生效</li></ul></li> <li>tips：
+<ul><li>此 Api 只有今日校园实现，微信无实现</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1/-7</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> previewFiles <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">previewFiles</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">&quot;xxxx&quot;</span><span class="token punctuation">,</span> filename<span class="token operator">:</span> <span class="token string">&quot;文件.doc&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="previewimages"><a href="#previewimages" class="header-anchor">#</a> previewImages</h2> <ul><li>说明：图片预览</li> <li>参数 payload 对象如下：
+<ul><li>imagesList <code>{Array&lt;{string, string}&gt;}</code> <ul><li>url <code>{string}</code> 地址</li> <li>desc <code>{string}</code> 图片名称</li></ul></li> <li>currentIndex <code>{string}</code> 当前预览索引值</li></ul></li> <li>tips：
+<ul><li>其中 imagesList 数组对象中的 desc 只支持今日校园，微信静默</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> previewImages <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">previewImages</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  imagesList<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">&quot;xxxx1&quot;</span><span class="token punctuation">,</span> filename<span class="token operator">:</span> <span class="token string">&quot;文件1.doc&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">&quot;xxxx2&quot;</span><span class="token punctuation">,</span> filename<span class="token operator">:</span> <span class="token string">&quot;文件2.doc&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  currentIndex<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="scanqrcode"><a href="#scanqrcode" class="header-anchor">#</a> scanQRCode</h2> <ul><li>说明：扫描二维码</li> <li>参数 payload 对象如下：
+<ul><li>keeping <code>{boolean}</code> 是否持续扫描 默认：false</li> <li>needResult <code>{number}</code> 是否直接返回结果 默认：true</li></ul></li> <li>tips：
+<ul><li>此 Api 中 keeping 参数只有今日校园实现，needResult 只有微信实现</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> scanQRCode <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">scanQRCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> text <span class="token operator">=</span> data<span class="token punctuation">;</span> <span class="token comment">// 成功时返回二维码信息</span>
+</code></pre></div><h2 id="startimchat"><a href="#startimchat" class="header-anchor">#</a> startIMChat</h2> <ul><li>说明：调用私信功能</li> <li>参数 payload 对象如下：
+<ul><li>studentId <code>{string}</code> 用户 id</li></ul></li> <li>tips：
+<ul><li>此 Api 只有今日校园实现</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1/-7</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> startIMChat <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">startIMChat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 根据code返回值来执行不支持平台的降级措施</span>
+</code></pre></div><h2 id="takephotoorcamera"><a href="#takephotoorcamera" class="header-anchor">#</a> takephotoOrCamera</h2> <ul><li>说明：调用拍照能力或打开相册</li> <li>参数 payload 对象如下：
+<ul><li>mode <code>{Array&lt;{string}&gt;｜ string}</code> 拍照/相册 其中 array 类型只支持微信 默认：camera
+<ul><li>常量值范围：<code>type mode = 'album' | 'camera'</code></li> <li>默认值：camera</li></ul></li> <li>isfront <code>{boolean}</code> 是否前置摄像头 默认： false
+<ul><li>默认值：false</li></ul></li> <li>isbeauty <code>{boolean}</code> 是否开启美颜
+<ul><li>默认值：false</li></ul></li> <li>isSaveToAlbum <code>{boolean}</code> 拍照是否落地到本地
+<ul><li>默认值：true</li></ul></li> <li>count <code>{number}</code> 一次可以选择和拍照的个数
+<ul><li>默认值：9</li></ul></li></ul></li> <li>tips：
+<ul><li>此 Api 中 isSaveToAlbum 只支持微信端，isbeauty、isfront 只支持今日校园，isbeauty 是否有效需要今日校园开通
+微信中 count 最大值为 9，超过该值会重置为 9</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1/-2</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> takephotoOrCamera <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">takephotoOrCamera</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  mode<span class="token operator">:</span> <span class="token string">&quot;camera&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> array <span class="token operator">=</span> data<span class="token punctuation">;</span> <span class="token comment">// 成功时返回，array为对象数组，返回结构 Array&lt;{base64: string}&gt;</span>
+</code></pre></div><h2 id="tel"><a href="#tel" class="header-anchor">#</a> tel</h2> <ul><li>说明：拨打电话</li> <li>参数 payload 对象如下：
+<ul><li>tel <code>{number|string}</code> 电话号码</li></ul></li> <li>tips：
+<ul><li>此 Api 中 微信中采用 h5 实现，通过创建 a 标签实现，业务方需要注意是否添加了禁止数字点击的 meta 标签，如果存在，微信端失效</li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> tel <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">tel</span><span class="token punctuation">(</span><span class="token punctuation">{</span> tel<span class="token operator">:</span> <span class="token string">&quot;11222222&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="withshare"><a href="#withshare" class="header-anchor">#</a> withShare</h2> <ul><li>说明：拨打电话</li> <li>参数 payload 对象如下：
+<ul><li>title <code>{number|string}</code> 分享标题</li> <li>desc <code>{number|string}</code> 分享描述</li> <li>link <code>{number|string}</code> 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致</li> <li>imgUrl <code>{number|string}</code> 分享图标</li></ul></li> <li>tips：
+<ul><li>此 Api 支持在点击自定义按钮后调用，今日校园中会自动弹出下侧面板，并且不支持 imgUrl 参数。微信中调用该 api 需要自行处理多平台 ui 交互，例如判断处于微信中可以使用弹出提示用户手动点击右上角分享等 ui 交互行为。</li> <li>今日校园中无返回 data，在微信中可以监听 data 对象告知你，用户分享的 type 和 message</li> <li>平台 type 枚举位置</li> <li><code>import { SHARE_TYPE } from &quot;counselor-sdk&quot;</code></li></ul></li> <li>返回值：
+<ul><li>成功：<code>{sdkApiReturnSuccessResponse}</code></li> <li>失败：<code>{sdkApiReturnErrorResponse|sdkEnvErrorResponse}</code></li></ul></li> <li>code 返回范围：0/-1</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> withShare <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;counselor-sdk&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">withShare</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token string">&quot;hi guys&quot;</span><span class="token punctuation">,</span>
+  desc<span class="token operator">:</span> <span class="token string">&quot;hello world&quot;</span><span class="token punctuation">,</span>
+  link<span class="token operator">:</span> <span class="token string">&quot;http://xxx.xxx.com&quot;</span><span class="token punctuation">,</span>
+  imgUrl<span class="token operator">:</span> <span class="token string">&quot;http://xxx.xxx.com/image.png&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/counselor-sdk-doc/doc/location.html" class="prev">
+        location
+      </a></span> <span class="next"><a href="/counselor-sdk-doc/doc/request.html">
+        request
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" defer></script><script src="/counselor-sdk-doc/assets/js/2.874a51b1.js" defer></script><script src="/counselor-sdk-doc/assets/js/15.5bd3f2e7.js" defer></script>
+  </body>
+</html>

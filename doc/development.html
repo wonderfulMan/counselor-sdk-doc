@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>开发counselor-sdk | counselor-sdk</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="你的强力伙伴">
+    
+    <link rel="preload" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css" as="style"><link rel="preload" href="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/2.874a51b1.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/9.cf527afc.js" as="script"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/10.06d2353f.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/11.d4f5eb32.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/12.370d6c7f.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/13.013ff707.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/14.3b2bbd93.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/15.5bd3f2e7.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/16.080dfaba.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/17.5bedfdee.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/3.ae0f4bc7.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/4.d6949b90.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/5.eefddad5.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/7.06a0828a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/8.f86fb59b.js">
+    <link rel="stylesheet" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/counselor-sdk-doc/" class="home-link router-link-active"><!----> <span class="site-name">counselor-sdk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>简介</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/counselor-sdk-doc/doc/description.html" class="sidebar-link">说明</a></li><li><a href="/counselor-sdk-doc/doc/install.html" class="sidebar-link">安装</a></li><li><a href="/counselor-sdk-doc/doc/setup.html" class="sidebar-link">快速上手</a></li><li><a href="/counselor-sdk-doc/doc/development.html" aria-current="page" class="active sidebar-link">开发counselor-sdk</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/development.html#counselor-sdk目录介绍" class="sidebar-link">counselor-sdk目录介绍</a></li><li class="sidebar-sub-header"><a href="/counselor-sdk-doc/doc/development.html#快速开发" class="sidebar-link">快速开发</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>API</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="开发counselor-sdk"><a href="#开发counselor-sdk" class="header-anchor">#</a> 开发counselor-sdk</h1> <h2 id="counselor-sdk目录介绍"><a href="#counselor-sdk目录介绍" class="header-anchor">#</a> counselor-sdk目录介绍</h2> <div class="language- extra-class"><pre class="language-text"><code>├── gen 为开发人员快速生成开发模版
+   ├── template
+      ├── index.ejs 
+      ├── wisedu.ejs
+      ├── wxwork.ejs
+      └── learningPower.ejs
+   └── index.js
+├── lib sdk开发目录
+   ├── bootstrap sdk启动
+        ├── index.js 
+        └── init.js
+   ├── config
+        ├── code.js 返回code常量
+        ├── jsApiList.js 微信等sdk权限列表常量
+        └── platform.js 平台相关常量
+   ├── modules sdk接口实现
+        ├── location 定位相关
+        ├── request 发送请求
+        ├── system 系统相关
+        └── view 视图
+   └── utils
+        ├── base.js 基础工具类
+        ├── index.js 出口文件
+        ├── platform 平台工具
+        ├── response 返回体工具
+        └── transform 转换类工具
+</code></pre></div><p>以上为counselor-sdk库的目录结构</p> <h2 id="快速开发"><a href="#快速开发" class="header-anchor">#</a> 快速开发</h2> <h3 id="开发规范、准则"><a href="#开发规范、准则" class="header-anchor">#</a> 开发规范、准则</h3> <ol><li>如果该sdk需要传入参数必须传入对象，并且该参数有不一致性时，需要进行校验、并且没有参数时，需要预制默认值，
+不要在实现类型中添加</li> <li>对于环境异常必须返回sdkEnvErrorResponse方法<br>
+对于api错误处理必须返回sdkApiReturnErrorResponse方法<br>
+对于api成功处理必须返回sdkApiReturnSuccessResponse方法<br>
+以上方法均在utils/response文件中，方便定位，并且它们会直接生产响应输出返回</li></ol> <h3 id="开发介绍"><a href="#开发介绍" class="header-anchor">#</a> 开发介绍</h3> <div class="language- extra-class"><pre class="language-text"><code>在counselor-sdk根目录执行 yarn run gen 目录名/sdk名称 会为你自动生产模版
+
+例如：yarn run gen system/helloworld 那么将在modules目录下的system中生产helloworld文件夹
+
+如果system不存在会自动创建该目录并创建index.js，执行以上操作后自动在index.js中注册，命令行中会
+提示以下信息告知你相关信息
+
+counselor-sdk: 模块生成完毕路径：/Users/xxx/Desktop/gitProject/counselor-sdk/lib/modules/system/helloworld
+counselor-sdk: 开始向该模块入口文件注入
+counselor-sdk: 模块路径注入入口文件成功
+
+</code></pre></div><p>执行以上操作你会看到helloworld文件夹中会出现wisedu.js、wxwork.js、index.js文件</p> <p>wisedu.js如下</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> sdkEnvErrorResponse <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../../utils/response'</span>
+<span class="token keyword">function</span> <span class="token function">wiseduImpletement</span> <span class="token punctuation">(</span><span class="token parameter">platform<span class="token punctuation">,</span> apiName<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>mamp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">sdkEnvErrorResponse</span><span class="token punctuation">(</span>platform<span class="token punctuation">,</span> apiName<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> wiseduImpletement
+
+</code></pre></div><p>wxwork.js如下</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> sdkEnvErrorResponse <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../../utils/response'</span>
+<span class="token keyword">function</span> <span class="token function">wxworkImpletement</span> <span class="token punctuation">(</span><span class="token parameter">platform<span class="token punctuation">,</span> apiName<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>wx<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">sdkEnvErrorResponse</span><span class="token punctuation">(</span>platform<span class="token punctuation">,</span> apiName<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> wxworkImpletement
+</code></pre></div><p>learningPower.js如下</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> sdkEnvErrorResponse <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../../utils/response'</span>
+<span class="token keyword">function</span> <span class="token function">learningPowerImpletement</span> <span class="token punctuation">(</span><span class="token parameter">platform<span class="token punctuation">,</span> apiName<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>my<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">sdkEnvErrorResponse</span><span class="token punctuation">(</span>platform<span class="token punctuation">,</span> apiName<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> learningPowerImpletement
+</code></pre></div><p>index.js如下</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> transformApiBindProps <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../../utils/transform'</span>
+<span class="token keyword">import</span> wxworkImpletement <span class="token keyword">from</span> <span class="token string">'./wxwork'</span>
+<span class="token keyword">import</span> wiseduImpletement <span class="token keyword">from</span> <span class="token string">'./wisedu'</span>
+<span class="token keyword">import</span> learningPowerImpletement <span class="token keyword">from</span> <span class="token string">'./learningPower'</span>
+
+<span class="token keyword">const</span> apiName <span class="token operator">=</span> <span class="token string">'helloworld'</span>
+
+<span class="token keyword">const</span> apiSwitch <span class="token operator">=</span> <span class="token punctuation">{</span>
+  wisedu<span class="token operator">:</span> wiseduImpletement<span class="token punctuation">,</span>
+  wxwork<span class="token operator">:</span> wxworkImpletement<span class="token punctuation">,</span>
+  micromessenger<span class="token operator">:</span> wxworkImpletement<span class="token punctuation">,</span>
+  learningPower<span class="token operator">:</span> learningPowerImpletement<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">innerHelloworld</span> <span class="token punctuation">(</span><span class="token parameter">platform<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> apiSwitch<span class="token punctuation">[</span>platform<span class="token punctuation">]</span><span class="token punctuation">(</span>platform<span class="token punctuation">,</span> apiName<span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">helloworld</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">args</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> featureFunction <span class="token operator">=</span> <span class="token function">transformApiBindProps</span><span class="token punctuation">(</span>innerHelloworld<span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+
+  <span class="token comment">// transformApiBindProps内部判断了平台是否为企业微信或者今日校园等平台 如果不是返回false，静默失败</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>featureFunction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">featureFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>开发人员只需要专注wisedu.js、wxwork.js即可，如果需要工具类或者校验函数在该目录下新建utils.js即可推荐目录和文件格式如下</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>├── template
+  ├── index<span class="token punctuation">.</span>ejs 
+  ├── wisedu<span class="token punctuation">.</span>ejs
+  ├── utils<span class="token punctuation">.</span>ejs
+  └── wxwork<span class="token punctuation">.</span>ejs
+</code></pre></div><p>utils.js如下（以下只是示例代码!!）</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span>
+  isPlainObject<span class="token punctuation">,</span>
+  validateFail<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../../utils/base'</span>
+
+<span class="token comment">/**
+ * @description 校验参数设置默认值
+ * @param {object} args  对象属性如下
+ * @return {object} args
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">checkArgs</span> <span class="token punctuation">(</span><span class="token parameter">apiName<span class="token punctuation">,</span> args <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> needResult<span class="token punctuation">,</span> keeping <span class="token punctuation">}</span> <span class="token operator">=</span> args
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isPlainObject</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>needResult <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> needResult <span class="token operator">!==</span> <span class="token string">'number'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">validateFail</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>apiName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">：参数中needResult必须为number类型</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> needResultValues <span class="token operator">=</span> <span class="token punctuation">[</span>
+      <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>needResult <span class="token operator">&amp;&amp;</span> needResultValues<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">needResultValue</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> needResultValue <span class="token operator">!==</span> needResult<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">validateFail</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>apiName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">：参数中needResult只能为</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>needResultValues<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">it</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> it<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>keeping <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> keeping <span class="token operator">!==</span> <span class="token string">'boolean'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">validateFail</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>apiName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">：参数中keeping必须为boolean类型</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    keeping<span class="token operator">:</span> keeping <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    needResult<span class="token operator">:</span> needResult <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/counselor-sdk-doc/doc/setup.html" class="prev">
+        快速上手
+      </a></span> <span class="next"><a href="/counselor-sdk-doc/doc/require.html">
+        使用须知
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" defer></script><script src="/counselor-sdk-doc/assets/js/2.874a51b1.js" defer></script><script src="/counselor-sdk-doc/assets/js/9.cf527afc.js" defer></script>
+  </body>
+</html>

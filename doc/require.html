@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用须知 | counselor-sdk</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="你的强力伙伴">
+    
+    <link rel="preload" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css" as="style"><link rel="preload" href="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/2.874a51b1.js" as="script"><link rel="preload" href="/counselor-sdk-doc/assets/js/13.013ff707.js" as="script"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/10.06d2353f.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/11.d4f5eb32.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/12.370d6c7f.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/14.3b2bbd93.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/15.5bd3f2e7.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/16.080dfaba.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/17.5bedfdee.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/3.ae0f4bc7.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/4.d6949b90.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/5.eefddad5.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/7.06a0828a.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/8.f86fb59b.js"><link rel="prefetch" href="/counselor-sdk-doc/assets/js/9.cf527afc.js">
+    <link rel="stylesheet" href="/counselor-sdk-doc/assets/css/0.styles.9f14b2e6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/counselor-sdk-doc/" class="home-link router-link-active"><!----> <span class="site-name">counselor-sdk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>简介</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>API</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/counselor-sdk-doc/doc/require.html" aria-current="page" class="active sidebar-link">使用须知</a></li><li><a href="/counselor-sdk-doc/doc/common.html" class="sidebar-link">bootstrap</a></li><li><a href="/counselor-sdk-doc/doc/location.html" class="sidebar-link">location</a></li><li><a href="/counselor-sdk-doc/doc/system.html" class="sidebar-link">system</a></li><li><a href="/counselor-sdk-doc/doc/request.html" class="sidebar-link">request</a></li><li><a href="/counselor-sdk-doc/doc/view.html" class="sidebar-link">view</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="使用须知"><a href="#使用须知" class="header-anchor">#</a> 使用须知</h1> <ol><li>以下 Api 接口描述中，微信统称微信公众号、企业微信，参数无标注必传均为选传（选传含有默认值会在具体Api进行标注）</li> <li>code 返回范围均如下</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token constant">OK</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 所有api成功返回结果</span>
+<span class="token constant">ERROR</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 当内部发生异常时</span>
+<span class="token constant">CANCEL</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">// 当照相/相册api会触发</span>
+<span class="token constant">INIT_ERROR</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token comment">// sdk初始化失败</span>
+<span class="token constant">GET_LOCATION_ERROR</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token comment">// 获取经纬度失败</span>
+<span class="token constant">LOACTION_PERMISSIONS</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token comment">// 定位权限未开启或者没有获取到</span>
+<span class="token constant">NOT_FOUND_BMAP</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token comment">// 百度地图加载失败或者未加载</span>
+<span class="token constant">NOT_WX_ALL_IMPLETEMENT</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token comment">// 微信、企业微信无实现时返回</span>
+<span class="token constant">NOT_WX_WORK_IMPLETEMENT</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token comment">// 企业微信无实现返回</span>
+</code></pre></div><p>需要使用该常量请引入<code>import { CODE } from 'counselor-sdk'</code></p> <ol start="3"><li>返回值解析
+<ul><li>sdkApiReturnSuccessResponse 类返回：</li></ul></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+  code<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  data<span class="token operator">:</span> payload <span class="token operator">||</span> <span class="token keyword">null</span><span class="token punctuation">,</span><span class="token comment">// 无需返回均为null，有则根据Api返回值代码示例</span>
+  message<span class="token operator">:</span> <span class="token string">'success'</span> <span class="token comment">// 默认success</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>sdkApiReturnErrorResponse 类返回：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+  code<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 无特殊场景均为-1</span>
+  data<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span><span class="token comment">// 无需返回均为null，有则根据Api返回值代码示例</span>
+  message<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">调用环境{platform}：{apiName}返回结果异常{err}</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+  <span class="token comment">// platform 微信或今日校园</span>
+  <span class="token comment">// apiName 接口名称</span>
+  <span class="token comment">// err 可能是微信、今日校园抛出的错误描述，或者无法判断时给出的提示</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>sdkEnvErrorResponse 类返回：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+  code<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 无特殊场景均为-1</span>
+  message<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">调用环境{platform}: 当前调用api名称{apiName}，请检查sdk是否初始化成功</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+  <span class="token comment">// 通常为 sdk初始化失败或者，wx/mamp在当前宿主环境上没有找到，该类型会在自动生产模版时，自动注册，无需</span>
+  <span class="token comment">// 手动添加</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="4"><li><p>部分接口采用了 h5 实现，对于定位类地址解析使用了百度地图相关 Api，使用时请确保你的应用成功加载了百度地图 jssdk（建议百度地图版本为 2.0）</p></li> <li><p>该 Api 版本均为辅导猫内部开发使用，对于外部使用出现的问题，优先级会降低处理，请见谅，接受优化意见！</p></li> <li><p>所有 Api 打包均根据具体项目走，请在项目方使用时注意是否忽略了 node_modules 文件夹，如果忽略了请设置 counselor-sdk 包名</p></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/counselor-sdk-doc/doc/development.html" class="prev">
+        开发counselor-sdk
+      </a></span> <span class="next"><a href="/counselor-sdk-doc/doc/common.html">
+        bootstrap
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/counselor-sdk-doc/assets/js/app.30f0cd4c.js" defer></script><script src="/counselor-sdk-doc/assets/js/2.874a51b1.js" defer></script><script src="/counselor-sdk-doc/assets/js/13.013ff707.js" defer></script>
+  </body>
+</html>
